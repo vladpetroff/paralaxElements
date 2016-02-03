@@ -1,3 +1,8 @@
+/*
+* paralaxElements for jQuery v0.1
+for init
+$('.paralaxElements').paralaxElements();
+*/
 (function ($) {
     var methods = {
         init: function (options) {
