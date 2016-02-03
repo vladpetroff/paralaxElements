@@ -13,7 +13,7 @@
                     maxVert: 100
                 }, options);
                 $this.data({
-                    paralaxBlock: {
+                    paralaxElements: {
                         settings: settings
                     }
                 });
@@ -23,7 +23,7 @@
         },
         _init: function () {
             var $this = this;
-            var settings = $this.data().paralaxBlock.settings;
+            var settings = $this.data().paralaxElements.settings;
             $this.css({
                 width: settings.width + 'px',
                 height: settings.height + 'px',
@@ -42,7 +42,7 @@
         },
         _actions: function () {
             var $this = this;
-            var settings = $this.data().paralaxBlock.settings;
+            var settings = $this.data().paralaxElements.settings;
             jQuery(document).mousemove(function (e) {
                 var mx = e.clientX;
                 var my = e.clientY;
@@ -61,7 +61,7 @@
             });
         }
     };
-    jQuery.fn.paralaxBlock = function (method) {
+    jQuery.fn.paralaxElements = function (method) {
         if (methods[method]) {
             return methods[ method ].apply(this, Array.prototype.slice.call(arguments, 1));
         } else if (typeof method === 'object' || !method) {
